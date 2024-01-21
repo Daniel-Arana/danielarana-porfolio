@@ -1,0 +1,653 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --logo: rgb(242, 205, 118);
+    --enlacesMenu: rgb(242, 205, 118);
+    --fondo-contenedor__menu: rgba(68, 68, 68, 0.7);
+    --borde-contenedor__menu: rgb(242, 205, 118);
+    --tipografía-mail-inicio: rgb(242, 205, 118);
+    --fondo-barraLateral-izquierda: #f4f5f7;
+    --tipografía-barraLateral-izquierda: #454f62;
+    --fondo-botonInicio-izquierda: #454f62;
+    --tipografía-botonInicio-izquierda: #f4f5f7;
+    --fondo-formulario: #f4f5f7;
+    --tipografíasFormulario: #454f62;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../../../media/fonts/playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'PlayfairDisplay-regular';
+    src: url('../../../media/fonts/playfair-display/static/PlayfairDisplay-Regular.ttf');
+}
+@font-face {
+    font-family: 'PlayfairDisplay-bold';
+    src: url('../../../media/fonts/playfair-display/static/PlayfairDisplay-Bold.ttf');
+}
+
+/* main: */
+.main{
+    display: flex;
+}
+
+
+
+/* main__contenedor:*/
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    border: 0.03em solid #454f62;
+}
+
+
+
+/* main__contenedorVertical: */
+.navegacion__contenedorVertical{
+    display: flex;
+    width: 5rem;
+    z-index: 1;
+}
+
+/* navegacion__contenedorVertical__cv */
+.navegacion__contenedorVertical__cv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f5f7;
+    height: 100vh;
+    width: 5rem;
+    border-right: 0.03em solid #454f62;
+}
+
+
+/* navegacion__contenedorVertical__cv--texto */
+.navegacion__contenedorVertical__cv--texto{
+    text-transform: uppercase;
+    transform: rotateZ(-90deg);
+    font-family: 'PlayfairDisplay-bold';
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    color: #454f62;
+}
+
+
+/* main__contenedorVertical__boton: */
+.navegacion__contenedorVertical__boton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #454f62;
+    width: 5rem;
+    height: 5vh;
+}
+
+
+/* main__contenedorVertical__boton__inicio: */
+.navegacion__contenedorVertical__boton--inicio{
+    width: 100%;
+    text-decoration: none;
+    font-family: 'PlayfairDisplay-bold';
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #f4f5f7;
+}
+/* Hover del botón de inicio. */
+.navegacion__contenedorVertical__boton:hover{
+    background-color: #3c5484;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Sección contenido */
+.contenido{
+    /* position: absolute; */
+    /* border: 1px solid black;
+    border-left: none; */
+    height: 100vh;
+    max-width: 100%;
+    width: 100%;
+    background-color: rgb(240, 240, 240);
+    overflow-y: scroll;
+}
+
+/* Scrollbar */
+.contenido::-webkit-scrollbar{
+    width: 0.4em;
+    background-color: rgba(22, 32, 58, 0.463); /* color de fondo */
+}
+
+.contenido::-webkit-scrollbar-thumb{
+    background-color: rgb(22, 32, 58); /* color de la barra */
+}
+
+
+
+.contenido__contenedor{
+    display: flex;
+    max-width: 100%;
+    margin: .5rem;
+}
+
+.contenido__contenedor__texto{
+    display: flex;
+    flex-direction: column;
+    margin: 4rem;
+}
+
+.contenido__contenedor__texto__encabezado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-family: 'PlayfairDisplay-bold';
+}
+
+.contenido__contenedor__texto--parrafos{
+    font-family: 'PlayfairDisplay';
+    line-height: 3em;
+}
+
+#crb{
+    line-height: 3rem;
+    padding:1rem;
+    margin:0;
+}
+
+
+
+
+
+
+
+
+/* min-width:4756px */
+
+/* min-width: 3840px */
+ @media screen and (min-width: 3840px){
+    .navegacion{
+        width: 100%;
+    }
+
+    .navegacion__contenedorVertical{
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical__cv{
+        width: 100%;
+    }
+
+    .navegacion__contenedorVertical__cv--texto{
+        width: 10%;
+        font-size: 10rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navegacion__contenedorVertical__boton{
+
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(-90deg);
+        font-size: 1rem;
+    }
+
+}
+
+/* min-width: 2560px */
+@media screen and (min-width: 2560px){
+    .navegacion{
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical{
+        width: 25%;
+    }
+
+    .navegacion__contenedorVertical__contacto{
+        width: 400%;
+    }
+
+    .navegacion__contenedorVertical__contacto--texto{
+        width: 10%;
+        font-size: 8rem;
+        display: flex;
+        justify-content: center;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        height: 25vh;
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(-90deg);
+        font-size: 8rem;
+    }
+
+    .formulario{
+       width: 100%;
+    }
+
+    .formulario__contenedor__contenido{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .contactame{
+        font-size: 8rem;
+    }
+
+    .formulario__contenedor__contenido__formulario{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .nombre{
+        font-size: 5rem;
+    }
+
+    .contenedorNombre{
+        width: 100%;
+        font-size: 5rem;
+    }
+
+    .email{
+        font-size: 5rem;
+    }
+
+    .contenedorEmail{
+        width: 100%;
+        font-size: 5rem;
+    }
+
+    .mensaje{
+        font-size: 5rem;
+    }
+
+    .contenedorMensaje{
+        width: 100%;
+        font-size: 5rem;
+    }
+    
+    .btn__enviar{
+        width: 100%;
+        font-size: 5rem;
+        color: #454f62;;
+        height: 7vh;
+    } 
+}
+
+/* min-width: 1920px */
+
+@media screen and (min-width: 1920px){
+    .navegacion{
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical{
+        width: 25%;
+    }
+
+    .navegacion__contenedorVertical__contacto{
+        width: 400%;
+    }
+
+    .navegacion__contenedorVertical__contacto--texto{
+        width: 10%;
+        font-size: 8rem;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        height: 25vh;
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(-90deg);
+        font-size: 8rem;
+    }
+
+    .formulario{
+       width: 100%;
+    }
+
+    .formulario__contenedor__contenido{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .contactame{
+        font-size: 6rem;
+    }
+
+    .formulario__contenedor__contenido__formulario{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .nombre{
+        font-size: 4%;
+    }
+
+    .contenedorNombre{
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .email{
+        font-size: 4rem;
+    }
+
+    .contenedorEmail{
+        width: 100%;
+        font-size: 4rem;
+    }
+
+    .mensaje{
+        font-size: 4rem;
+    }
+
+    .contenedorMensaje{
+        width: 100%;
+        font-size: 4rem;
+    }
+    
+    .btn__enviar{
+        width: 100%;
+        font-size: 4rem;
+        color: #454f62;;
+        height: 7vh;
+    } 
+}
+
+
+/* min-width: 1600px */
+@media screen and (min-width: 1600px){
+
+    .navegacion{
+        width: 10%;
+    }
+
+    .navegacion__contenedorVertical{
+        width: 100%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 10%;
+        height: 25vh;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        font-size: 2.5rem;
+    }
+
+    .navegacion__contenedorVertical__contacto{
+        width: 100%;
+    }
+
+    .navegacion__contenedorVertical__contacto--texto{
+        font-size: 4rem;
+    }
+
+    .formulario__contenedor__contenido{
+        padding: 0;
+        justify-content: center;
+        width: 80%;
+    }
+
+    .contactame{
+        font-size: 5rem;
+    }
+
+    .formulario__contenedor__contenido__formulario{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .nombre{
+        font-size: 3.5rem;
+    }
+
+    .contenedorNombre{
+        width: 100%;
+        font-size: 3.5rem;
+    }
+
+    .email{
+        font-size: 3.5rem;
+    }
+
+    .contenedorEmail{
+        width: 100%;
+        font-size: 3.5rem;
+    }
+
+    .mensaje{
+        font-size: 3.5rem;
+    }
+
+    .contenedorMensaje{
+        width: 100%;
+        height: 20vh;
+    }
+    
+    .btn__enviar{
+        width: 100%;
+        font-size: 3.5rem;
+        color: #454f62;;
+        height: 5vh;
+    } 
+} 
+
+/* max-width: 992px */
+@media screen and (max-width: 992px){
+
+
+    .formulario__contenedor__contenido{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .contactame{
+        font-size: 2rem;
+    }
+
+    .formulario__contenedor__contenido__formulario{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .nombre{
+        font-size: 1.5rem;
+    }
+
+    .contenedorNombre{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .email{
+        font-size: 1.5rem;
+    }
+
+    .contenedorEmail{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+
+    .mensaje{
+        font-size: 1.5rem;
+    }
+
+    .contenedorMensaje{
+        width: 100%;
+        font-size: 1.5rem;
+    }
+    
+    .btn__enviar{
+        width: 100%;
+        font-size: 1.5rem;
+        height: 7vh;
+    } 
+} 
+
+/* max-width: 768px */
+@media screen and (max-width: 768px){
+
+    .navegacion__contenedorVertical__boton{
+        height: 15vh;
+    }
+
+    .formulario{
+       width: 100%;
+    }
+
+    .formulario__contenedor__contenido{
+        padding: 0;
+        justify-content: center;
+    }
+
+    .contactame{
+        font-size: 1.7rem;
+    }
+
+    .formulario__contenedor__contenido__formulario{
+        width: 100%;
+        height: 70vh;
+    }
+
+    .nombre{
+        font-size: 14px;
+    }
+
+    .contenedorNombre{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .email{
+        font-size: 14px;
+    }
+
+    .contenedorEmail{
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .mensaje{
+        font-size: 14px;
+    }
+
+    .contenedorMensaje{
+        width: 100%;
+        font-size: 14px;
+    }
+    
+    .btn__enviar{
+        width: 100%;
+        font-size: 14px;
+        height: 7vh;
+    } 
+} 
+
+
+/* max-width: 576px */
+@media screen and (max-width: 576px){
+
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__cv{
+        display: none;
+    }
+
+    .contenido__contenedor__texto{
+        margin-top: 10rem;
+    }
+
+
+
+} 
+
+
+/* max-width:460px */
+@media screen and (max-width: 460px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+} 
+
+
+/* max-width: 360px */
+@media screen and (max-width: 360px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+} 

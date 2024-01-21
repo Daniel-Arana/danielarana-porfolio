@@ -1,0 +1,342 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --fondo-barraLateral-izquierda: #f4f5f7;
+    --tipografía-barraLateral-izquierda: #454f62;
+    --fondo-botonInicio-izquierda: #454f62;
+    --tipografía-botonInicio-izquierda: #f4f5f7;
+    --fondo-bio: #f4f5f7;
+}
+
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url('../../../media/fonts/playfair-display/PlayfairDisplay-VariableFont_wght.ttf');
+}
+@font-face {
+    font-family: 'PlayfairDisplay-regular';
+    src: url('../../../media/fonts/playfair-display/static/PlayfairDisplay-Regular.ttf');
+}
+@font-face {
+    font-family: 'PlayfairDisplay-bold';
+    src: url('../../../media/fonts/playfair-display/static/PlayfairDisplay-Bold.ttf');
+}
+
+/* main: */
+.main{
+    display: flex;
+}
+
+
+
+/* main__contenedor: */
+.navegacion{
+    display: flex;
+    justify-content: space-between;
+    border: 0.03em solid #454f62;
+}
+
+
+
+/* main__contenedor__vertical:*/
+.navegacion__contenedorVertical{
+    display: flex;
+    width: 5rem;
+}
+
+/* Alineo al centro de la página el contenedor de proyectos. */
+.navegacion__contenedorVertical__bio{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f5f7;
+    height: 100vh;
+    width: 5rem;
+    border-right: 0.03em solid #454f62;
+
+}
+
+/* main__contenedor__vertical__proyectos__texto: */
+.navegacion__contenedorVertical__bio--texto{
+    text-transform: uppercase;
+    transform: rotateZ(-90deg);
+    font-family: 'PlayfairDisplay-bold';
+    font-size: 1.5rem;
+    display: flex;
+    color: #454f62;
+}
+
+
+/* navegacion__contenedorVertical__boton: */
+.navegacion__contenedorVertical__boton{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #454f62;
+    width: 5rem;
+    height: 5vh;
+}
+
+
+/* navegacion__contenedorVertical__boton--inicio: */
+.navegacion__contenedorVertical__boton--inicio{
+    width: 100%;
+    text-decoration: none;
+    font-family: 'PlayfairDisplay-bold';
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #f4f5f7;
+}
+/* navegacion__contenedorVertical__boton:hover */
+.navegacion__contenedorVertical__boton:hover{
+    background-color: #3c5484;
+    transition: .2s;
+}
+
+
+
+
+
+
+
+
+/* Sección contenido */
+.contenido{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #f4f5f7;
+    border: 0.03em solid #454f62;
+    border-bottom: none;
+    border-left: none;
+    width: 100%;
+    height: 100vh;
+}
+
+.contenido__contenedor{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenido__foto{
+    display: flex;
+    justify-content: center;
+    width: 30%;
+}
+
+.contenido__foto--personal{ 
+    object-fit: contain; /* ajusto la imagen al contenedor */
+    height: 35vh;
+}
+
+.contenido__texto{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    text-align: justify;
+}
+
+.contenido__texto__contenedor{
+    width:50%;
+}
+
+.contenido__texto__contenedor--bio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+}
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1100px){
+
+    .contenido{
+        overflow: scroll;
+        
+    }
+    
+    .contenido__contenedor{
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .contenido__foto{
+        width: 50%;
+        height: 40vh;
+    }
+
+    .contenido__texto{
+        width: 100%;
+    }
+
+    .contenido__texto__contenedor{
+        width: 100%;
+    }
+
+}
+
+
+/* @media screen and (max-width: 600px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+
+} */
+
+@media screen and (max-width: 550px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+
+    .contenido__foto{
+        margin-top: 4rem;
+    }
+
+ 
+
+}
+
+@media screen and (max-width: 460px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+
+    .contenido{
+        overflow: scroll;
+        
+    }
+    
+    .contenido__contenedor{
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .contenido__foto{
+        margin-top:4rem;
+        width: 40%;
+        height: 40vh;
+    }
+
+    .contenido__texto{
+        width: 100%;
+    }
+
+    .contenido__texto__contenedor{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 400px){
+    .navegacion{
+        width: 0%;
+    }
+
+    .navegacion__contenedorVertical__boton{
+        width: 100%;
+        height: 10vh;
+        position: fixed;
+    }
+
+    .navegacion__contenedorVertical__boton--inicio{
+        transform: rotate(0deg);
+    }
+
+    .navegacion__contenedorVertical__bio{
+        display: none;
+    }
+
+    .contenido{
+        overflow: scroll;
+        
+    }
+    
+    .contenido__contenedor{
+        width: 80%;
+        height: 100vh;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .contenido__foto{
+        margin-top:10rem;
+        width: 50%;
+        height: 40vh;
+    }
+
+    .contenido__texto{
+        width: 100%;
+    }
+
+    .contenido__texto__contenedor{
+        width: 100%;
+    }
+}
